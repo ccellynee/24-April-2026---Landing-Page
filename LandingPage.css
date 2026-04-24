@@ -1,0 +1,164 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+.container {
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "nav"
+    "main"
+    "footer";
+}
+
+header {
+    grid-area: header;
+    background:rgb(231, 200, 160);
+    color: white;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+nav {
+    grid-area: nav;
+    background: rgb(248, 226, 200);
+    padding: 10px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: bisque;
+}
+
+main {
+    grid-area: main;
+}
+
+.content {
+    height: 90vh;
+    background: url();
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contentText {
+    background: lavender;
+    padding: 30px;
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.intro button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    border: none;
+    background: aliceblue;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.destinasiText{
+    text-align: center;
+    margin: 40px 0 20px;
+}
+
+.destinasi{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.box {
+    text-decoration: none;
+    color: black;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.box img {
+    width: 100%;
+}
+
+.boxContent {
+    padding: 15px;
+}
+
+.boxContent p {
+    font-size: 14px;
+    color: antiquewhite;
+}
+
+.box:hover {
+    transform: translate(-5px);
+}
+
+footer {
+    grid-area: footer;
+    background: #0f172a;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+@media (max-width: 600px) {
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hero {
+        height: 60vh;
+        padding: 20px;
+    }
+
+    .hero-text {
+        padding: 15px;
+        font-size: 14px;
+    }
+
+    .destinasi {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width: 760px) {
+
+    .destinasi {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero {
+        height: 70vh;
+    }
+}
+
+@media (min-width: 1024px) {
+
+    .destinasi {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .hero {
+        height: 90vh;
+    }
+}
